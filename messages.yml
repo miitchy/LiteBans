@@ -41,16 +41,14 @@ command:
     unban_usage: '&cUsage: /unban <player>'
     example: '&cExample: /ban Player 7d [reason]'
     silent_prefix: '&f[&7Silent&f] '
-    broadcast_ban: '&a$banningPlayer &fbanned &a$bannedPlayer &ffor ''&a$reason&f'''
-    broadcast_tempban: '&a$banningPlayer &ftempbanned &a$bannedPlayer &ffor $tempDuration
-      for ''&a$reason&f'''
-    broadcast_ip_ban: '&a$banningPlayer &fIP-banned &a$bannedPlayer &ffor ''&a$reason&f'''
-    broadcast_temp_ip_ban: '&a$banningPlayer &ftemp IP-banned &a$bannedIP &ffor $tempDuration
-      for ''&a$reason&f'''
+    broadcast_ban: '&8[&c&lSplit&f&l&nMC&8] &c$banningPlayer &fbanned &c$bannedPlayer &ffor - '&f$reason''
+    broadcast_tempban: '&8[&c&lSplit&f&l&nMC&8] &c$banningPlayer &ftempbanned &c$bannedPlayer &ffor $tempDuration - '&f$reason''
+    broadcast_ip_ban: '&8[&c&lSplit&f&l&nMC&8] &c$banningPlayer &fIP-banned &c$bannedPlayer &ffor - '&f$reason'' 
+    broadcast_temp_ip_ban: '&8[&c&lSplit&f&l&nMC&8] &c$banningPlayer &ftemp IP-banned &fbannedIP $tempDuration &ffor - '&f$reason'
     broadcast_ip_ban_hidden: '[Hidden IP]'
-    broadcast_unban: '&a$displayName &funbanned &a$bannedPlayer'
-    previous_ban_removed: '&aPrevious ban for $bannedPlayer removed.'
-    previous_ban_existing: '&c$bannedPlayer is already banned, and you do not have
+    broadcast_unban: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &funbanned &c$bannedPlayer'
+    previous_ban_removed: '&8[&c&lSplit&f&l&nMC&8] &cPrevious ban for $bannedPlayer removed.'
+    previous_ban_existing: '&8[&c&lSplit&f&l&nMC&8] &c$bannedPlayer is already banned, and you do not have
       permissions to replace existing bans.'
     unban_queue: '&6If they try to reconnect, they will be unbanned.'
     error_no_spec: '&cNo valid time specification detected!'
@@ -63,38 +61,38 @@ command:
     usage: '&cUsage: /mute [-s] <player> [time spec] [reason]'
     unmute_usage: '&cUsage: /unmute <player>'
     example: '&cExample: /mute Player 7d [reason]'
-    broadcast: '&a$displayName &fmuted &a$mutedPlayer &ffor ''&a$reason&f'''
-    broadcast_tempmute: '&a$displayName &ftempmuted &a$mutedPlayer &ffor $tempDuration
-      for ''&a$reason&f'''
+    broadcast: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &fmuted &c$mutedPlayer &ffor '&f$reason&f''
+    broadcast_tempmute: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &ftempmuted &c$mutedPlayer &ffor $tempDuration
+      for '&f$reason&f''
     message: |-
-      &4You have been muted by $displayName&4 for &c'&4$reason&c'&4.
-      &4This mute will expire in $duration.
+      &8[&c&lSplit&f&l&nMC&8] &fYou have been muted by &c$displayName&f for '&c$reason&f'.
+      &cThis mute will expire in &f$duration.
     message_permanent: |-
-      &4You have been permanently muted by $displayName&4 for &c'&4$reason&c'&4.
-      &4This mute will not expire.
-    unmute_fail: '&cTarget is not muted!'
-    previous_mute_removed: '&aPrevious mute for $mutedPlayer removed.'
+      &8[&c&lSplit&f&l&nMC&8] &fYou have been permanently muted by &c$displayName&f for '&c$reason&f'.
+      &cThis mute will not expire.
+    unmute_fail: '&8[&c&lSplit&f&l&nMC&8] &cTarget is not muted!'
+    previous_mute_removed: '&8[&c&lSplit&f&l&nMC&8] &fPrevious mute for $mutedPlayer removed.'
     previous_mute_existing: '&c$mutedPlayer is already muted, and you do not have
       permissions to replace existing mutes.'
     exempt: '&cYou can''t mute $player!'
-    notification: '&c$mutedPlayer tried to speak, but is muted.'
+    notification: '&8[&c&lSplit&f&l&nMC&8] &c$mutedPlayer tried to speak, but is muted.'
     error_not_enabled: '&cMuting is not enabled in the configuration!'
     broadcast_ip_mute: '&a$displayName &fIP-muted &a$mutedPlayer &ffor ''&a$reason&f'''
     broadcast_temp_ip_mute: '&a$displayName &ftemp IP-muted &a$mutedIP &ffor $tempDuration
       for ''&a$reason&f'''
-    no_override: '&cPlayer is already muted!'
+    no_override: '&8[&c&lSplit&f&l&nMC&8] &cPlayer is already muted!'
     response: ''
   warn:
     usage: '&cUsage: /warn [-s] <player> [reason]'
     unwarn_usage: '&cUsage: /unwarn <player>'
     example: ''
-    broadcast: '&a$displayName &fwarned &a$warnedPlayer &ffor ''&a$reason&f'''
+    broadcast: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &fwarned &c$warnedPlayer &ffor '&f$reason&f'
     message: |-
-      &4You have been warned by $displayName&4 for &c'&4$reason&c'&4.
-      &4This warning will expire in $duration.
+      &8[&c&lSplit&f&l&nMC&8] &fYou have been warned by &c$displayName&f for '$reason'.
+  
     list_entry: ' \- Warned by $displayName: ''$reason&f'''
-    unwarn_response: '&aLast warning removed for $player.'
-    unwarn_fail: '&cTarget has no warnings!'
+    unwarn_response: '&8[&c&lSplit&f&l&nMC&8] &fLast warning removed for &c$player.'
+    unwarn_fail: '&8[&c&lSplit&f&l&nMC&8] &fTarget has no warnings!'
     exempt: '&cYou can''t warn $player!'
     cooldown: '&cYou need to wait $seconds seconds before $player can be warned again.'
     response: ''
@@ -102,17 +100,17 @@ command:
     usage: '&c/history <player> [entries=10]'
     start: '&aHistory for $target (Limit: $limit):'
     ban_entry: |-
-      &a -- [&f$timeSince ago&a] --&f
-      &f $name was &cbanned &fby $displayName: '&a$reason&f'
+      &f -- [&c$timeSince ago&f] --&f
+      &c $name&f was &cbanned &fby &c$displayName: &f'$reason&f'
     mute_entry: |-
-      &a -- [&f$timeSince ago&a] --&f
-      &f $name was &7muted &fby $displayName: '&a$reason&f'
+      &f -- [&c$timeSince ago&f] --&f
+      &c $name&f was &cmuted &fby &c$displayName: &f'$reason&f'
     warn_entry: |-
-      &a -- [&f$timeSince ago&a] --&f
-      &f $name was &6warned &fby $displayName: '&a$reason&f'
+      &f -- [&c$timeSince ago&f] --&f
+      &c $name&f was &cwarned &fby &c$displayName: &f'$reason&f'
     kick_entry: |-
-      &a -- [&f$timeSince ago&a] --&f
-      &f $name was &ekicked &fby $displayName: '&a$reason&f'
+      &f -- [&c$timeSince ago&f] --&f
+      &c $name&f was &ckicked &fby &c$displayName: &f'$reason&f'
     active_suffix: '&f [&cActive&f]'
     active_suffix_temp: |-
       &f [&cActive&f]
@@ -120,10 +118,10 @@ command:
     error_no_history: '&cNo history found.'
     unban_entry: |2-
 
-       &f$name was &7unbanned &fby $displayName.
+       &f$name was &4unbanned &fby $displayName.
     unmute_entry: |2-
 
-       &f$name was &7unmuted &fby $displayName.
+       &f$name was &4unmuted &fby $displayName.
     expired_suffix: '&f [&8Expired&f]'
   warnings:
     usage: '&c/warnings <player>'
@@ -159,12 +157,12 @@ command:
     usage: '&c/checkban <player>'
     no_ban: '&cTarget is not banned!'
     banned: |-
-      &aTarget &f[&a$target&f]&a is banned:
-      &aBanned by: $displayName
-      &aReason: $reason&a
-      &aBanned on: $bannedFrom
-      &aBanned until: $bannedUntil ($banTimeLeft)
-      &aIP ban: $ipban, silent: $silent, permanent: $permanent
+      &fTarget &f[&a$target&f]&a is banned:
+      &fBanned by: &c$displayName
+      &fReason: $reason&a
+      &fBanned on: $bannedFrom
+      &fBanned until: $bannedUntil ($banTimeLeft)
+      &fIP ban: $ipban, silent: $silent, permanent: $permanent
   lastuuid:
     usage: '&c/lastuuid <player|IP>'
     message: '&fLast UUID for &a$name&f: &a$uuid'
@@ -177,32 +175,32 @@ command:
     error_not_found: '&cGeoIP information for $target not found.'
   lockdown:
     usage: '&c/lockdown <reason> | /lockdown end'
-    message: '&cServer lockdown activated (reason: "$reason&c")'
+    message: '&8[&c&lSplit&f&l&nMC&8] &cServer lockdown activated (reason: "$reason&c")'
     stopped: '&aLockdown has been deactivated.'
     kick_message: |-
-      Server lockdown active, try again later.
+      &8[&c&lSplit&f&l&nMC&8] Server lockdown active, try again later.
       Reason: $reason
     error_not_active: '&cLockdown is not active!'
   kick:
     usage: '&c/kick <player> [reason]'
     no_match: '&cError: &4Player not found.'
-    message: 'Kicked by $displayName: $reason'
-    message_no_reason: Kicked by $displayName.
-    response: '&6$player has been kicked.'
-    broadcast: '&a$player&f was kicked by &a$displayName&f for ''&a$reason&f''.'
-    broadcast_no_reason: '&a$player&f was kicked by &a$displayName&f.'
+    message: '&8[&c&lSplit&f&l&nMC&8]&f Kicked by &c$displayName: &f$reason'
+    message_no_reason: &8[&c&lSplit&f&l&nMC&8] &fKicked by &c$displayName.
+    response: '&8[&c&lSplit&f&l&nMC&8] &f$player has been kicked.'
+    broadcast: '&8[&c&lSplit&f&l&nMC&8] &c$player&f was kicked by &c$displayName&f for '&f$reason&f'.'
+    broadcast_no_reason: '&8[&c&lSplit&f&l&nMC&8] &c$player&f was kicked by &c$displayName&f.'
     exempt: '&cYou can''t kick $player!'
     kick_requested: '&6Player $player is not online on this server. Cross-server kick
       has been requested.'
   togglechat:
-    toggle_off: '&aChat has been toggled off.'
-    toggle_on: '&aChat has been toggled on.'
+    toggle_off: '&8[&c&lSplit&f&l&nMC&8] &cChat has been toggled off.'
+    toggle_on: '&8[&c&lSplit&f&l&nMC&8] &fChat has been toggled on.'
   clearchat:
-    broadcast: '&aChat has been cleared by $displayName.'
+    broadcast: '&8[&c&lSplit&f&l&nMC&8] &fChat has been cleared by &c$displayName.'
   mutechat:
-    response: '&cServer chat is currently disabled!'
-    broadcast_disabled: '&cServer chat has been disabled by $displayName.'
-    broadcast_enabled: '&aServer chat has been enabled by $displayName.'
+    response: '&8[&c&lSplit&f&l&nMC&8] &cServer chat is currently disabled!'
+    broadcast_disabled: '&8[&c&lSplit&f&l&nMC&8] &fServer chat has been disabled by &c$displayName.'
+    broadcast_enabled: '&8[&c&lSplit&f&l&nMC&8] &fServer chat has been enabled by &c$displayName.'
   litebans:
     reload_success: '&aLiteBans reloaded successfully.'
     reload_fail_connect: '&aLiteBans reloaded. &cFailed to connect to database.'
