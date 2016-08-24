@@ -1,11 +1,12 @@
 time_format: yyyy-MM-dd
 history_time_format: yyyy-MM-dd
 banned_message_base: |
+       &8[&c&lSplit&f&l&nMC&8]
   &cYou are banned from this server!&f
 
-  Banned on: $bannedFrom
-  Banned by: $displayName
-  Reason: $reason&f
+  
+  Banned by: &c$displayName
+  Reason: &f$reason&f
 banned_message: |-
   $base
   Expires in: $banTimeLeft
@@ -14,32 +15,32 @@ banned_message_permanent: |-
   $base
   You are permanently banned!
   $appealMessage
-banned_message_appeal_message: 'Appeal at: &nhttp://example.com'
+banned_message_appeal_message: 'Appeal at: www.splitmc.com'
 banned_message_geoip_blacklist: |-
   &cYou are banned from this server!&f
 
   Your location is blacklisted:  $geoip
-default_ban_reason: The Ban Hammer has spoken!
-default_mute_reason: Spamming
-permission_error: '&cYou don''t have permission!'
-muted: '&cYou are muted! ($duration remaining)!'
-muted_permanent: '&cYou are permanently muted!'
+default_ban_reason: Undefined
+default_mute_reason: Undefined
+permission_error: '&8[&c&lSplit&f&l&nMC&8] &cYou don''t have permission!'
+muted: '&8[&c&lSplit&f&l&nMC&8] &cYou are muted! ($duration remaining)!'
+muted_permanent: '&8[&c&lSplit&f&l&nMC&8] &cYou are permanently muted!'
 notify:
-  banned_player_join: '&c$player&f tried to join, but is banned ($duration)!'
-  banned_geoip_blacklist: '&c$player&f tried to join, but is blacklisted ($geoip)!'
-error_no_reason_provided: '&cYou must provide a reason for this punishment!'
+  banned_player_join: '&8[&c&lSplit&f&l&nMC&8] &c$player&f tried to join, but is banned ($duration)!'
+  banned_geoip_blacklist: '&8[&c&lSplit&f&l&nMC&8] &c$player&f tried to join, but is blacklisted ($geoip)!'
+error_no_reason_provided: '&8[&c&lSplit&f&l&nMC&8] &cYou must provide a reason for this punishment!'
 error_no_sql_connection: '&cLiteBans is not connected to a database!'
-internal_error: '&cAn internal error occurred while attempting to perform this command.'
+internal_error: '&8[&c&lSplit&f&l&nMC&8] &cAn internal error occurred while attempting to perform this command.'
 duration_limit_error: '&cMaximum duration allowed: $duration'
-warned_join: '&cYou have new warnings:'
+warned_join: '&8[&c&lSplit&f&l&nMC&8] &cYou have new warnings:'
 warned_join_entry: |-
-  &4 - Warned by &c$displayName&4: &c$reason
-     &4(&c$timeSince ago&4)
+  &f - Warned by &c$displayName&f: &f$reason
+     &f(&c$timeSince ago&f)
 command:
   ban:
-    usage: '&cUsage: /ban [-s] <player> [time spec] [reason]'
-    unban_usage: '&cUsage: /unban <player>'
-    example: '&cExample: /ban Player 7d [reason]'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &cUsage: /ban [-s] <player> [time spec] [reason]'
+    unban_usage: '&8[&c&lSplit&f&l&nMC&8] &cUsage: /unban <player>'
+    example: '&8[&c&lSplit&f&l&nMC&8] &cExample: /ban Player 7d [reason]'
     silent_prefix: '&f[&7Silent&f] '
     broadcast_ban: '&8[&c&lSplit&f&l&nMC&8] &c$banningPlayer &fbanned &c$bannedPlayer &ffor - '&f$reason''
     broadcast_tempban: '&8[&c&lSplit&f&l&nMC&8] &c$banningPlayer &ftempbanned &c$bannedPlayer &ffor $tempDuration - '&f$reason''
@@ -50,16 +51,16 @@ command:
     previous_ban_removed: '&8[&c&lSplit&f&l&nMC&8] &cPrevious ban for $bannedPlayer removed.'
     previous_ban_existing: '&8[&c&lSplit&f&l&nMC&8] &c$bannedPlayer is already banned, and you do not have
       permissions to replace existing bans.'
-    unban_queue: '&6If they try to reconnect, they will be unbanned.'
+    unban_queue: '&8[&c&lSplit&f&l&nMC&8] &cIf they try to reconnect, they will be unbanned.'
     error_no_spec: '&cNo valid time specification detected!'
-    unban_fail: '&cTarget is not banned!'
-    exempt: '&cYou can''t ban $player!'
-    broadcast_unmute: '&a$displayName &funmuted &a$bannedPlayer'
-    no_override: '&cPlayer is already banned!'
+    unban_fail: '&8[&c&lSplit&f&l&nMC&8] &cTarget is not banned!'
+    exempt: '&8[&c&lSplit&f&l&nMC&8] &cYou can''t ban $player!'
+    broadcast_unmute: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &funmuted &c$bannedPlayer'
+    no_override: '&8[&c&lSplit&f&l&nMC&8] &cPlayer is already banned!'
     response: ''
   mute:
-    usage: '&cUsage: /mute [-s] <player> [time spec] [reason]'
-    unmute_usage: '&cUsage: /unmute <player>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &cUsage: /mute [-s] <player> [time spec] [reason]'
+    unmute_usage: '&8[&c&lSplit&f&l&nMC&8] &cUsage: /unmute <player>'
     example: '&cExample: /mute Player 7d [reason]'
     broadcast: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &fmuted &c$mutedPlayer &ffor '&f$reason&f''
     broadcast_tempmute: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &ftempmuted &c$mutedPlayer &ffor $tempDuration
@@ -83,8 +84,8 @@ command:
     no_override: '&8[&c&lSplit&f&l&nMC&8] &cPlayer is already muted!'
     response: ''
   warn:
-    usage: '&cUsage: /warn [-s] <player> [reason]'
-    unwarn_usage: '&cUsage: /unwarn <player>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &cUsage: /warn [-s] <player> [reason]'
+    unwarn_usage: '&8[&c&lSplit&f&l&nMC&8] &cUsage: /unwarn <player>'
     example: ''
     broadcast: '&8[&c&lSplit&f&l&nMC&8] &c$displayName &fwarned &c$warnedPlayer &ffor '&f$reason&f'
     message: |-
@@ -92,13 +93,13 @@ command:
   
     list_entry: ' \- Warned by $displayName: ''$reason&f'''
     unwarn_response: '&8[&c&lSplit&f&l&nMC&8] &fLast warning removed for &c$player.'
-    unwarn_fail: '&8[&c&lSplit&f&l&nMC&8] &fTarget has no warnings!'
-    exempt: '&cYou can''t warn $player!'
-    cooldown: '&cYou need to wait $seconds seconds before $player can be warned again.'
+    unwarn_fail: '&8[&c&lSplit&f&l&nMC&8] &8[&c&lSplit&f&l&nMC&8] &fTarget has no warnings!'
+    exempt: '&8[&c&lSplit&f&l&nMC&8] &cYou can''t warn $player!'
+    cooldown: '&8[&c&lSplit&f&l&nMC&8] &cYou need to wait $seconds seconds before $player can be warned again.'
     response: ''
   history:
-    usage: '&c/history <player> [entries=10]'
-    start: '&aHistory for $target (Limit: $limit):'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/history <player> [entries=10]'
+    start: '&8[&c&lSplit&f&l&nMC&8] &aHistory for $target (Limit: $limit):'
     ban_entry: |-
       &f -- [&c$timeSince ago&f] --&f
       &c $name&f was &cbanned &fby &c$displayName: &f'$reason&f'
@@ -124,26 +125,26 @@ command:
        &f$name was &4unmuted &fby $displayName.
     expired_suffix: '&f [&8Expired&f]'
   warnings:
-    usage: '&c/warnings <player>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/warnings <player>'
     start: '&aActive warnings for $target:'
   prunehistory:
-    usage: '&c/prunehistory <player> [duration]'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/prunehistory <player> [duration]'
     message: '&aHistory pruned.'
   staffhistory:
-    usage: '&c/staffhistory <player> [entries=10]'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/staffhistory <player> [entries=10]'
     start: '&aStaff history for $target (Limit: $limit):'
   staffrollback:
-    usage: '&c/staffrollback <player> [duration]'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/staffrollback <player> [duration]'
     message: '&aRollback completed, total entries removed: $amount'
   banlist:
     start: '&f=== &aPage &6$page&a out of &6$total&f ==='
   iphistory:
-    usage: '&c/iphistory <player> [entries=10]'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/iphistory <player> [entries=10]'
     start: '&aLogin history for $target (Limit: $limit):'
     entry: '&a - [&f$date&a]&f $name&a:&f $ip'
     error_no_history: '&cNo history found.'
   dupeip:
-    usage: '&c/dupeip <player>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/dupeip <player>'
     start: '&fScanning &7$name&f on &a$ip&f. &f[&aOnline&f] [&7Offline&f] [&cBanned&f]'
     separator: '&f, '
     online: '&a'
@@ -154,7 +155,7 @@ command:
     start: '&fScanning &a$num&f online players.. [&aOnline&f] [&7Offline&f] [&cBanned&f]'
     entry: '&f$player&a: $result'
   checkban:
-    usage: '&c/checkban <player>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/checkban <player>'
     no_ban: '&cTarget is not banned!'
     banned: |-
       &fTarget &f[&a$target&f]&a is banned:
@@ -164,23 +165,23 @@ command:
       &fBanned until: $bannedUntil ($banTimeLeft)
       &fIP ban: $ipban, silent: $silent, permanent: $permanent
   lastuuid:
-    usage: '&c/lastuuid <player|IP>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/lastuuid <player|IP>'
     message: '&fLast UUID for &a$name&f: &a$uuid'
   geoip:
-    usage: '&c/geoip <player|IP>'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/geoip <player|IP>'
     message: '&a$target&f is from: &a$result'
     error_disabled: '&cGeoIP support is not enabled in the configuration!'
     error_unavailable: '&cGeoIP support is currently unavailable, has it been downloaded
       yet?'
     error_not_found: '&cGeoIP information for $target not found.'
   lockdown:
-    usage: '&c/lockdown <reason> | /lockdown end'
+    usage: '&8[&c&lSplit&f&l&nMC&8] &c/lockdown <reason> | /lockdown end'
     message: '&8[&c&lSplit&f&l&nMC&8] &cServer lockdown activated (reason: "$reason&c")'
     stopped: '&aLockdown has been deactivated.'
     kick_message: |-
       &8[&c&lSplit&f&l&nMC&8] Server lockdown active, try again later.
       Reason: $reason
-    error_not_active: '&cLockdown is not active!'
+    error_not_active: '&8[&c&lSplit&f&l&nMC&8] &cLockdown is not active!'
   kick:
     usage: '&c/kick <player> [reason]'
     no_match: '&cError: &4Player not found.'
@@ -189,7 +190,7 @@ command:
     response: '&8[&c&lSplit&f&l&nMC&8] &f$player has been kicked.'
     broadcast: '&8[&c&lSplit&f&l&nMC&8] &c$player&f was kicked by &c$displayName&f for '&f$reason&f'.'
     broadcast_no_reason: '&8[&c&lSplit&f&l&nMC&8] &c$player&f was kicked by &c$displayName&f.'
-    exempt: '&cYou can''t kick $player!'
+    exempt: '&8[&c&lSplit&f&l&nMC&8] &cYou can''t kick $player!'
     kick_requested: '&6Player $player is not online on this server. Cross-server kick
       has been requested.'
   togglechat:
@@ -202,7 +203,7 @@ command:
     broadcast_disabled: '&8[&c&lSplit&f&l&nMC&8] &fServer chat has been disabled by &c$displayName.'
     broadcast_enabled: '&8[&c&lSplit&f&l&nMC&8] &fServer chat has been enabled by &c$displayName.'
   litebans:
-    reload_success: '&aLiteBans reloaded successfully.'
+    reload_success: '&8[&c&lSplit&f&l&nMC&8] &aLiteBans reloaded successfully.'
     reload_fail_connect: '&aLiteBans reloaded. &cFailed to connect to database.'
     add_history_usage: '&c/litebans addhistory <name> <UUID> <IP>'
     add_history: '&aHistory added.'
